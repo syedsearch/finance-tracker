@@ -13,7 +13,7 @@
   <tbody>
     <% @user_stocks.each do |user_stock| %>
     <tr>
-      <td><%= link_to user_stock.name,stock_details_path %></td>
+      <td><%= link_to user_stock.name,stock_details_path(:ticklerid => user_stock.ticker ) %></td>
       <td><%= user_stock.ticker %></td>
       <td><%= user_stock.price %></td>
       <td><%= user_stock.daily_volume %></td>

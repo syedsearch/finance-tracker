@@ -1,0 +1,45 @@
+<h1>I am in the Detailed Boss - Here are the details</h1>
+
+<p>
+  <strong>Symbol:</strong>
+  <%= @stock.symbol%>
+</p>
+
+<p>
+  <strong>year_high:</strong>
+  <%= @stock.year_high%>
+</p>
+
+<p>
+  <strong>year_low:</strong>
+  <%= @stock.year_low%>
+</p>
+
+
+<p>
+  <strong>open:</strong>
+  <%= @stock.open%>
+</p>
+
+<p>
+  <strong>dividend_yield:</strong>
+  <%= @stock.dividend_yield%>
+</p>
+
+<p>
+  <strong>two_hundredday_moving_average:</strong>
+  <%= @stock.percent_change_from_two_hundredday_moving_average%>
+</p>
+
+<p>
+  <strong>pe_ratio:</strong>
+  <%= @stock.pe_ratio%>
+</p>
+
+<p>
+  <strong>Pecentage Change:</strong>
+  <%= @stock.change_percent_change%>
+</p>
+
+
+<%= link_to 'Back to List', my_portfolio_path %>

@@ -12,7 +12,10 @@ class Stock < ActiveRecord::Base
     where(ticker: ticker_symbol).first
   end
   
-
+  def self.get_detail_of_stock(ticker_symbol)
+    detailed_stock = StockQuote::Stock.quote(ticker_symbol)
+    detailed_stock
+  end
   
   def self.new_from_lookup(ticker_symbol)
     looked_up_stock = StockQuote::Stock.quote(ticker_symbol)

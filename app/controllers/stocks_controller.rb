@@ -30,11 +30,15 @@ class StocksController < ApplicationController
     else
       puts "Stock not found"
       render status: :not_found, nothing: true
+      
     end
   end
   
   def detail
-    puts "Horray - Reached Detail Page - Now show me Detail Boss"
+    puts %Q{Horray - Reached Detail Page - Now Detail Boss for the ticler is #{params[:ticklerid]}}
+    @stock = Stock.get_detail_of_stock(params[:ticklerid])
+    puts %Q{Retrieved the following values from the Stock_quotes service is change_percent_change - #{@stock.change_percent_change} }
+    render partial: 'detail'
   end
   
 end
